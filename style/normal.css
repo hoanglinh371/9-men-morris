@@ -1,0 +1,93 @@
+/*
+#gameMenu {
+    background: url(../pictures/wood.jpg);
+    background-size: cover;
+    box-shadow: 20px 10px 10px rgba(0,0,0,0.8);
+}
+*/
+#background1 {
+    opacity: 0 !important;
+}
+
+#gameBoard {
+    background: url(../pictures/wood.jpg);
+    background-size: cover;
+    box-shadow: 2.353vmin 1.471vmin 1.471vmin rgba(0,0,0,0.8);
+}
+
+.fieldLineHorizontal {
+    background-color: black;
+}
+.fieldLineVertical {
+    background-color: black;
+}
+
+.field:after {
+    background-color: black;
+}
+.fieldMoveable:after {
+    background-color: #00aa00;
+}
+.fieldMoveable:hover:after {
+    background-color: #44ff00;
+}
+
+.stoneWhite, .stoneBlack {
+    margin: -4.3vmin 0 0 -4.3vmin;
+    width: 8vmin;
+    height: 8vmin;
+    
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8);
+}
+
+.stoneWhite {
+    /* background-position needs to be set randomly between 0 and 8vmin */
+    background: url(../pictures/white.jpg);
+    background-repeat: repeat;
+    border: 0.3vmin solid black;
+}
+.stoneBlack {
+    background: url(../pictures/black.jpg);
+    background-repeat: repeat;
+    border: 0.3vmin solid white;
+}
+
+.stoneMoveable {
+    border-color: #00ff00;
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8),
+                inset 0 0 0 1000px rgba(0,255,0,0.1);
+}
+.stoneMoveable.stoneHoverable:hover {
+    margin: -4.6vmin 0 0 -4.6vmin;
+    border: 0.6vmin solid #ff7700;
+    
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8),
+                inset 0 0 0 0 white;
+}
+/* Its specified later so will override possible moveable */
+.stoneActive {
+    border: 0.6vmin solid #ff7700;
+    margin: -4.6vmin 0 0 -4.6vmin;
+
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8),
+                inset 0 0 0 1000px rgba(255,120,0,0.3);
+}
+.stoneActive:hover {
+    margin: -4.6vmin 0 0 -4.6vmin;
+    border: 0.6vmin solid #ff7700;
+    
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8),
+                inset 0 0 0 1000px rgba(255,120,0,0.3);
+}
+.stoneRemoveable {
+    border-color: #ff0000;
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.5),
+                inset 0 0 0 1000px rgba(255,0,0,0.3);
+}
+.stoneRemoveable.stoneHoverable:hover {
+    margin: -4.6vmin 0 0 -4.6vmin;
+    border: 0.6vmin solid #ff7777;
+    
+    box-shadow: 0.8vmin 0.4vmin 0.4vmin rgba(0,0,0,0.8),
+                inset 0 0 0 1000px rgba(255,120,120,0.5);
+}

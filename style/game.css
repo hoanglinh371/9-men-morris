@@ -1,0 +1,108 @@
+#gameBoard {
+    border: 0.441vmin solid black;
+    display: none;
+    border-radius: 4.412vmin;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -38vmin 0 0 -45vmin;
+
+    width: 90vmin;
+    height: 76vmin;
+    
+    padding: 0;
+}
+
+/* 10vmin fieldLength */
+
+.fieldLineHorizontal {
+    height: 0.6vmin;
+    margin: -0.3vmin 0 0 0;
+    padding:0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index:1;
+}
+.fieldLineVertical {
+    width: 0.6vmin;
+    margin: 0 0 0 -0.3vmin;
+    padding:0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index:1;
+}
+
+.field {
+    height: 9vmin;
+    width: 9vmin;
+    margin: -4.5vmin 0 0 -4.5vmin;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index:2;
+}
+.field:after {
+    position: absolute;
+    content: "";
+    height: 2vmin;
+    width: 2vmin;
+    left: 3.5vmin;
+    top: 3.5vmin;
+    border-radius: 50%;
+    border: none;
+}
+
+.stoneWhite,
+.stoneBlack {
+    padding: 0;
+    border-radius: 50%;
+    z-index: 3;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: transform 0.4s ease-out, z-index 0.4s step-end;
+}
+.stoneMoveFast {
+    transition: transform 0.2s, z-index 0.2s step-end;
+}
+.stoneMoveInstant {
+    transition: transform 0s, z-index 0s;
+}
+.stoneActive {
+    z-index: 4;
+}
+
+#winnerScreen {
+    width: 90vmin;
+    height: 76vmin;
+    padding: 0;
+    border: none;
+    display: table;
+    overflow: hidden;
+    border-radius: 4vmin;
+    position: absolute;
+    background-color: rgba(255,255,255,0.85);
+    z-index: 5;
+
+    color: black;
+    font-family: 'Arial';
+    font-size: 4.6vmin;
+    text-align: center;
+    transition: 0.4s;
+}
+#winnerScreen div {
+    display: table-cell; 
+    vertical-align: middle;
+}
+#winnerScreen span {
+    font-weight: bold;
+    font-size: 8.5vmin;
+    text-transform: uppercase;
+}
